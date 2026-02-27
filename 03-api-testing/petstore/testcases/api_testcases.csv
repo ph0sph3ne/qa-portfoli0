@@ -1,0 +1,7 @@
+ID,Title,Method,Endpoint,Input,Expected
+API-001,Create pet (valid),POST,/pet,"valid JSON body",201/200 + created + correct JSON
+API-002,Get pet by id (valid),GET,/pet/{id},"existing id",200 + correct JSON
+API-003,Update pet (valid),PUT,/pet,"valid JSON body",200 + updated fields
+API-004,Delete pet (valid),DELETE,/pet/{id},"existing id",200/204 + deleted
+API-005,Get pet with invalid id type,GET,/pet/abc,"invalid id",400/404 + error message
+API-006,Create pet missing required field,POST,/pet,"missing required field",400 + validation error
